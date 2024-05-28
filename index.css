@@ -53,12 +53,14 @@ body {
 .health-text
 {
   margin-left: 5px;
-  color: black
+  color: black;
+  user-select: none;
 }
 .combo-text
 {
   margin-left: 5px;
-  color: black
+  color: black;
+  user-select: none;
 }
 
 
@@ -70,4 +72,9 @@ body {
   #health-bar {
     width: 150px;
   }
+}
+
+.small{
+  font-size: 10px;
+  user-select: none;
 }

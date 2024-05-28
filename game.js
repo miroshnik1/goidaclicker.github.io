@@ -28,11 +28,11 @@ let score = 0
 let bestScore = 0
 
 let curSpeedIndex = 0
-let newLevelSpeedRequire = [10, 100, 200, 400, 500, 1000]
-let speed = [250, 150, 100, 75, 50, 40, 25]
-let spawnSpeed = [1000, 1000, 900, 700, 600, 500, 300]
+let newLevelSpeedRequire = [50, 100, 200, 400, 500, 1000]
+let speed = [250, 100, 80, 65, 50, 40, 25]
+let spawnSpeed = [1000, 900, 800, 600, 500, 400, 300]
 
-let hitRadius = 130
+let hitRadius = 90
 
 let enemies = [];
 let bloodEffects = [];
@@ -79,7 +79,7 @@ for (let i = 1; i < 6; ++i)
 function updateTime() {
     const currentTime = new Date();
     const elapsedTime = Math.floor((currentTime - startTime) / 1000);
-    document.getElementById('time').innerText = `Время игры: ${elapsedTime} сек.`;
+    document.getElementById('time').innerText = `Время игры: ${elapsedTime} сек`;
   }
   
   let startTime = new Date();
@@ -89,7 +89,7 @@ function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.fillStyle = '#000';
     ctx.beginPath();
-    ctx.drawImage(heroImage, hero.x - 65, hero.y - 65 - arsens[Math.floor(arsens_frame / 3)], 130, 130);
+    ctx.drawImage(heroImage, hero.x - 50, hero.y - 50 - arsens[Math.floor(arsens_frame / 3)], 100, 100);
     
     arsens_frame += 1
     arsens_frame %= 150
@@ -104,7 +104,7 @@ function draw() {
         enemyCtx.fillStyle = '#f00';
         enemyCtx.beginPath();
 
-        enemyCtx.drawImage(womens[Math.floor(frame / 5)], enemies[i].x - 50, enemies[i].y - 50, 100, 100)
+        enemyCtx.drawImage(womens[Math.floor(frame / 5)], enemies[i].x - 40, enemies[i].y - 40, 80, 80)
         
         
 
