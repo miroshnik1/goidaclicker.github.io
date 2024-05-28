@@ -315,9 +315,6 @@ canvas.addEventListener('click', (e) => {
  
         swordSwingAnimation();
 
-        if ("vibrate" in navigator) {
-            navigator.vibrate(200)
-          }
     }
     else
     {
