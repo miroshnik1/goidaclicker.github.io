@@ -184,8 +184,6 @@ function update() {
         score = 0;
     }
     updateTime();
-    backgroundmusik.play();
-    
 }
 
 
@@ -268,11 +266,11 @@ function spawnRandomEnemy()
 }
 
 canvas.addEventListener('click', (e) => {
-  const nearestEnemy = getNearestEnemy(canvas.width / 2, canvas.height / 2);
+    backgroundmusik.play();
+    const nearestEnemy = getNearestEnemy(canvas.width / 2, canvas.height / 2);
 
     if (nearestEnemy) {
 
-        window.navigator.vibrate(100)
 
         withoutFalse += 1
         if (withoutFalse > 5)
@@ -314,7 +312,12 @@ canvas.addEventListener('click', (e) => {
             }, 400); // Clear the animation after 200ms
         };
 
+ 
         swordSwingAnimation();
+
+        if ("vibrate" in navigator) {
+            navigator.vibrate(200)
+          }
     }
     else
     {
