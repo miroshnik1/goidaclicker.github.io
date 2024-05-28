@@ -59,6 +59,7 @@ var backgroundmusik = new Audio('animetyanbigbrothernya.mp3');
 
 
 
+
 let frame = 0
 
 
@@ -177,7 +178,8 @@ function update() {
         }
 
 
-        backgroundmusik.play()
+        backgroundmusik.currentTime = 0; 
+        backgroundmusik.play();
 
         score = 0;
     }
@@ -269,6 +271,9 @@ canvas.addEventListener('click', (e) => {
   const nearestEnemy = getNearestEnemy(canvas.width / 2, canvas.height / 2);
 
     if (nearestEnemy) {
+
+        window.navigator.vibrate(100)
+
         withoutFalse += 1
         if (withoutFalse > 5)
         {
