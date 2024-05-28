@@ -1,0 +1,73 @@
+body {
+  background-color: #000000;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#game-canvas {
+  background-color: #ffffff;
+  border: 1px solid #000;
+  max-width: 100%;
+  height: auto;
+}
+
+#health-bar {
+  align-items: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 200px;
+  height: 20px;
+  background-color: #ff0000;
+  border-radius: 10px;
+  z-index: 10;
+}
+
+
+
+
+#combo-bar {
+  align-items: left;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  width: 0px;
+  height: 20px;
+  background-color: #2500f7;
+  border-radius: 10px;
+}
+
+#bars
+{
+  align-items: left;
+  width: 300px;
+}
+
+.health-text
+{
+  margin-left: 5px;
+  color: black
+}
+.combo-text
+{
+  margin-left: 5px;
+  color: black
+}
+
+
+@media (max-width: 414px) { 
+  #game-canvas {
+    width: 90vw;
+  }
+
+  #health-bar {
+    width: 150px;
+  }
+}
