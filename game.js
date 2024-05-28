@@ -29,8 +29,10 @@ let bestScore = 0
 
 let curSpeedIndex = 0
 let newLevelSpeedRequire = [10, 25, 50, 100, 200, 500]
-let speed = [200, 150, 100, 50, 40, 30, 25]
-let spawnSpeed = [1000, 900, 800, 500, 400, 350, 200]
+let speed = [200, 120, 80, 40, 30, 25, 15]
+let spawnSpeed = [1000, 900, 600, 400, 300, 250, 200]
+
+let less = new Audio('less.mp3');
 
 let hitRadius = 90
 
@@ -50,6 +52,11 @@ goiImage.src = "goy.gif"
 var goyda = new Audio('goida.mp3');
 
 var gopnek = new Audio('gopnek.mp3');
+
+var backgroundmusik = new Audio('animetyanbigbrothernya.mp3');
+
+
+
 
 
 let frame = 0
@@ -157,6 +164,7 @@ function update() {
             withoutFalse = 0;
             curSpeedIndex = 0;
 
+
             clearInterval(enemiesInterval);
                 enemiesInterval = setInterval(() => {
                     enemies.push({
@@ -168,9 +176,14 @@ function update() {
                 }, spawnSpeed[curSpeedIndex]);
         }
 
+
+        backgroundmusik.play()
+
         score = 0;
     }
     updateTime();
+    backgroundmusik.play();
+    
 }
 
 
@@ -267,7 +280,7 @@ canvas.addEventListener('click', (e) => {
         }
 
         scoreBar.innerText = score;
-        let less = new Audio('less.mp3');
+        
         less.play();
 
 
