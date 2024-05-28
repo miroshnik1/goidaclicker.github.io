@@ -28,9 +28,9 @@ let score = 0
 let bestScore = 0
 
 let curSpeedIndex = 0
-let newLevelSpeedRequire = [50, 100, 200, 400, 500, 1000]
-let speed = [250, 100, 80, 65, 50, 40, 25]
-let spawnSpeed = [1000, 900, 800, 600, 500, 400, 300]
+let newLevelSpeedRequire = [10, 25, 50, 100, 200, 500]
+let speed = [200, 150, 100, 50, 40, 30, 25]
+let spawnSpeed = [1000, 900, 800, 500, 400, 350, 200]
 
 let hitRadius = 90
 
